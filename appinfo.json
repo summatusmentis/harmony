@@ -1,0 +1,9 @@
+{
+  "id": "com.summatusmentis.mrdooble",
+  "version": "1.0.0",
+  "vendor": "summatus mentis",
+  "type": "web",
+  "main": "src/index.html",
+  "title": "Mr. Dooble",
+  "uiRevision": "2"
+}

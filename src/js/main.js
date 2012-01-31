@@ -1,5 +1,5 @@
 const REV = 6,
-       BRUSHES = ["sketchy", "shaded", "chrome", "fur", "longfur", "web", "", "simple", "squares", "ribbon", "", "circles", "grid"],
+       BRUSHES = ["simple","sketchy", "shaded", "chrome", "fur", "longfur", "web", "", "squares", "ribbon", "", "circles", "grid"],
        USER_AGENT = navigator.userAgent.toLowerCase();
 
 var SCREEN_WIDTH = window.innerWidth,
@@ -500,6 +500,7 @@ function onCanvasTouchEnd( event )
 function saveToLocalStorage()
 {
 	localStorage.canvas = canvas.toDataURL('image/png');
+    document.write('<img src="/media/internal/'+localStorage.canvas+'"/>');
 }
 
 function flatten()
@@ -509,6 +510,7 @@ function flatten()
 	context.fillStyle = 'rgb(' + BACKGROUND_COLOR[0] + ', ' + BACKGROUND_COLOR[1] + ', ' + BACKGROUND_COLOR[2] + ')';
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	context.drawImage(canvas, 0, 0);
+
 }
 
 function cleanPopUps()
